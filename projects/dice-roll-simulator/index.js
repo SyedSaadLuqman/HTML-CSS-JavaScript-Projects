@@ -19,7 +19,7 @@ function updateRollHistory() {
   for (let i = 0; i < historyList.length; i++) {
     const listItem = document.createElement("li");
     listItem.innerHTML = `Roll ${i + 1}: <span>${getDiceFace(
-      historyList[i]
+      historyList[i],
     )}</span>`;
     rollHistoryEl.appendChild(listItem);
   }
@@ -49,5 +49,5 @@ buttonEl.addEventListener("click", () => {
   setTimeout(() => {
     diceEl.classList.remove("roll-animation");
     rollDice();
-  }, 1000);
+  }, 500);
 });
